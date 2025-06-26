@@ -1,0 +1,86 @@
+
+body{
+  background: linear-gradient(-25deg,#000000,#333333);
+  height: 100vh;
+  width: 100vw;
+  padding: 0px;
+  margin: 0px;
+}
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title{
+  position: absolute;
+  top: 70vh;
+  font-family: "ubuntu", sans-serif;
+  font-size: 10vw;
+  font-weight: 450;
+  background: linear-gradient(-25deg,#cdcdcc,#808080,#cdcdcc,#808080,#cdcdcc);
+  background-size: 300vw;
+  background-clip: text;
+  color: transparent;
+  animation-name: texture;
+  animation-duration: 10s;
+  animation-delay: -0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.container{
+  width: 20vw;
+  height: 15vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.loader{
+  width: 3vw;
+  height: 6vw;
+  background-color: #dadad9;
+  border-radius: 2vw;
+  animation-name: scaling;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  border: solid #656565 1px;
+}
+#div1{
+  animation-delay: .25s;
+}
+#div2{
+  animation-delay: .5s;
+}
+#div3{
+  animation-delay: .75s;
+}
+#div4{
+  animation-delay: 1s;
+}
+#div5{
+  animation-delay: 1.25s;
+}
+@keyframes scaling{
+  0%{
+    padding: 0vw 0vw;
+  }
+  50%{
+    padding: 4.5vw 0vw;
+  }
+  100%{
+    padding: 0vw 0vw;
+  }
+}
+@keyframes texture{
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+}

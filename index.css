@@ -1,0 +1,126 @@
+body{
+  margin: 0px;
+  padding: 0;
+  background: linear-gradient(-10deg,#000000,#333333);
+  width: 100vw;
+  height: 100vh;
+  background-size: 300vh;
+  font-family: "ubuntu", sans serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  animation-name: move;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-delay: -0.5s;
+}
+#loader{
+  font-family: "ubuntu",sans-serif;
+  font-size: 13vw;
+  font-weight: 450;
+  background: linear-gradient(-45deg,#cdcdcc,#808080,#cdcdcc,#808080);
+  background-clip: text;
+  background-size: 300vw;
+  color: transparent;
+  animation-name: texture;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+}
+#content {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+.a{
+  text-decoration: none;
+  color: #000000;
+}
+.text{
+  color: #f8f8ff;
+  text-align: center;
+  font-size: 10vw;
+  margin-top: -50vh;
+  background: linear-gradient(-25deg,#f8f8ff,#909090,#f8f8ff);
+  background-clip: text;
+  color: transparent;
+  background-size: 200vw;
+  animation-name: texture;
+  animation-delay: -0.5s;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.log{
+  position: absolute;
+  top: 70vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5vw;
+}
+.button{
+  padding: -1px;
+  width: 90vw;
+  height: 7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "ubuntu", sans serif;
+  font-size: 5vw;
+  font-weight: 450;
+  border-radius: 10vw;
+  border: solid #656565 3px;
+  background-color: #e3e5e4;
+  opacity: 80;
+  transition: transform 0.1s ease;
+}
+.button:active{
+  transform: scale(0.95);
+  opacity: 85%;
+  box-shadow: 0px 0px 5px #ffffff;
+}
+@keyframes move{
+  0%{
+    background-position: 0% 0%
+  }
+  25%{
+    background-position: 100% 0%;
+  }
+  50%{
+    background-position: 100% 100%;
+  }
+  75%{
+    background-position: 0% 100%;
+  }
+  100%{
+    background-position: 0% 0%;
+  }
+}
+@keyframes texture{
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
