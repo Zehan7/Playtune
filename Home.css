@@ -1,11 +1,10 @@
 
-
 body{
   margin: 0px;
   padding: 0px;
   width: 100vw;
   height: 100vh;
-  /background-image: url("../ig.png");
+  /background-image: url("../images.jpeg");
   font-family: "ubuntu", sans-serif;
   background: linear-gradient(-10deg,#000000,#333333);
 }
@@ -16,12 +15,12 @@ body{
   align-items: center;
   justify-content: right;/*pain*/
   gap: 1vw;
-  overflow-x: hidden;
+  overflow: hidden;
   position: relative;
 }
 .header{
-  background: rgba(0,0,0,0.5);
-  border: solid rgba(0,0,0,0.3) 1.5vw;
+  background: rgba(0,0,0,0.7);
+  border: solid rgba(0,0,0,0.4) 1.5vw;
   border-radius: 10vw;
   margin: 2vh auto;
   width: 95vw;
@@ -56,7 +55,7 @@ body{
   border-left: solid rgba(255,255,255,0.3) 0.3vw;
   font-size: 5vw;
 }
-#song_search:focus {
+#song_search:focus{
   outline: none;
   border: none; 
 }
@@ -64,6 +63,11 @@ body{
   font-size: 7vw !important;
   cursor: pointer;
   color: #DCDCDC;
+  transition: transform 0.1s ease;
+}
+#open:active{
+  transform: scale(0.8);
+  -webkit-tap-highlight-color: transparent;
 }
 .menu_icon{
   padding: 2.5vw;
