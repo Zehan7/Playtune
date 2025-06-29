@@ -4,24 +4,65 @@ body{
   padding: 0px;
   width: 100vw;
   height: 100vh;
+  /background-image: url("../ig.png");
+  font-family: "ubuntu", sans-serif;
   background: linear-gradient(-10deg,#000000,#333333);
-  background-size: 300vw;
-  animation-name: bg_pos;
-  animation-iteration-count: infinite;
-  animation-duration: 3s;
-  animation-timing-function: linear;
+}
+.nav_bar{
+  min-height: 13vw;
+  font-size: 4.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: right;/*pain*/
+  gap: 1vw;
+  position: sticky;
+  overflow-x: hidden;
 }
 .header{
-  background-color: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.5);
+  border: solid rgba(0,0,0,0.3) 1.5vw;
+  border-radius: 10vw;
+  margin: 2vh auto;
+  width: 95vw;
 }
-@keyframes bg_pos{
-  0%{
-    background-position: 0% 50%;
-  }
-  50%{
-    background-position: 100% 50%;
-  }
-  100%{
-    background-position: 0% 50%;
-  }
+.items_container{
+  margin: -3vh;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0px;
+  width: 60vw;
+  top: 0;
+  right: -100%;
+  background-color: rgba(0,0,0,0.1);
+  color: #f8f8ff;
+  align-items: center;
+  height: 90vh;
+}
+.nav_items{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+}
+#song_search{
+  padding: 3vw;
+  width: 70%;
+  border-radius: 6vw;
+  border: solid rgba(160,160,160,1) 0.5vw;
+}
+#open{
+  font-size: 6vw !important;
+  cursor: pointer;
+  color: #f8f8ff;
+}
+.menu_icon{
+  position: sticky;
+  padding: 2.5vw;
+  background-color: rgba(166,166,166,0.5);
+  margin-right: 1vw;
+  border-radius: 5vw;
+  border: solid rgba(166,166,166,0.3) 0.5vw;
 }
