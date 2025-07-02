@@ -45,14 +45,16 @@ document.getElementById("open").style.opacity = "0";
     }
     function closeNav() {
       document.getElementById("i_container").style.width = "0vw";
-document.getElementById("open").style.opacity = "1";
+document.getElementById("open").style.opacity = "1";
+
       document.getElementById("close").style.opacity = "0";
-      document.getElementById("mySidenav").style.width = "0";
     }
-document.addEventListener("click", function (event) {
+
+document.addEventListener("click", function (event) {
   const menu = document.getElementById("i_container");
   const openBtn = document.getElementById("open");
- const closeBtn = document.getElementById("close");
+
+ const closeBtn = document.getElementById("close");
   const isClickInside = menu.contains(event.target) || openBtn.contains(event.target);
 
   if (!isClickInside) {
