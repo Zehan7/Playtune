@@ -39,17 +39,20 @@
 </div>
 <script>
     function openNav() {
-      document.getElementById("i_container").style.width = "56vw";
-document.getElementById("open").style.opacity = "0";
-      document.getElementById("close").style.opacity = "1";
-    }
-    function closeNav() {
-      document.getElementById("i_container").style.width = "0vw";
-document.getElementById("open").style.opacity = "1";
+  const menu = document.getElementById("i_container");
+  menu.style.width = "56vw";
+  menu.style.borderLeft = "solid rgba(255,255,255,0.2) 0.5vw";
+  document.getElementById("open").style.opacity = "0";
+  document.getElementById("close").style.opacity = "1";
+}
 
-      document.getElementById("close").style.opacity = "0";
-    }
-
+function closeNav() {
+  const menu = document.getElementById("i_container");
+  menu.style.width = "0vw";
+  menu.style.borderLeft = "none";
+  document.getElementById("open").style.opacity = "1";
+  document.getElementById("close").style.opacity = "0";
+}
 document.addEventListener("click", function (event) {
   const menu = document.getElementById("i_container");
   const openBtn = document.getElementById("open");
@@ -66,4 +69,4 @@ document.addEventListener("click", function (event) {
   </script>
 </body>
 
-</html>
+</html>

@@ -42,7 +42,6 @@ body{
   height: 100vh;
   transition: 0.5s ease;
   width:0;
-  border-left: solid rgba(255,255,255,0.2) 0.5vw;
   overflow-x: hidden;
 }
 .nav_items{
