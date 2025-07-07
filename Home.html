@@ -19,6 +19,7 @@
       <button class="menu_icon" onclick="openNav()">
       <i class="fa fa-bars" id="open"></i>
       </button>
+      <div class="blur-overlay" id="blurOverlay"></div>
       <ul class="items_container" id="i_container">
         <button onclick="closeNav()" class="closebt">
           <i class="fa-solid fa-xmark" style="font-size:9vw;" id="close">
@@ -30,40 +31,77 @@
           ‎ ‎   ‎ ‎Home
         </a>
         </li>
-        <li class="nav_items"><a href="#" class="nv_a">Home</li></a>
-        <li class="nav_items"><a href="#" class="nv_a">Home</li></a>
-        <li class="nav_items"><a href="#" class="nv_a">Home</li></a>
+        <li class="nav_items"><a href="#" class="nv_a">Home</a></li>
+        <li class="nav_items"><a href="#" class="nv_a">Home</a></li>
+        <li class="nav_items"><a href="#" class="nv_a">Home</a></li>
       </ul>
     </nav>
+    <nav class="b_nav">
+  <div class="b_div_img">
+    <img src="https://img.youtube.com/vi/xTvyyoF_LZY/maxresdefault.jpg" alt="icon" class="b_img">
+  </div>
+  <ul class="b_items_container">
+    <li class="b_nav_items">
+      <a href="#" class="b_nv_a">
+        <i class="fa-solid fa-house"></i>
+        <span class="name_b">Home</span>
+      </a>
+    </li>
+    <li class="b_nav_items">
+      <a href="#" class="b_nv_a">
+        <i class="fa-solid fa-compass"></i>
+        <span class="name_b">Explore</span>
+      </a>
+    </li>
+    <li class="b_nav_items">
+      <a href="#" class="b_nv_a">
+        <i class="fa-solid fa-book"></i>
+        <span class="name_b">Library</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
   </header>
 </div>
 <script>
-    function openNav() {
+   function openNav() {
   const menu = document.getElementById("i_container");
+  const blur = document.getElementById("blurOverlay");
   menu.style.width = "56vw";
   menu.style.borderLeft = "solid rgba(255,255,255,0.2) 0.5vw";
   document.getElementById("open").style.opacity = "0";
   document.getElementById("close").style.opacity = "1";
+  blur.style.opacity = "1";
+  blur.style.pointerEvents = "auto";
+  document.body.classList.add("noscroll");
 }
 
 function closeNav() {
   const menu = document.getElementById("i_container");
+  const blur = document.getElementById("blurOverlay");
   menu.style.width = "0vw";
   menu.style.borderLeft = "none";
   document.getElementById("open").style.opacity = "1";
   document.getElementById("close").style.opacity = "0";
+  blur.style.opacity = "0";
+  blur.style.pointerEvents = "none";
+  document.body.classList.remove("noscroll");
 }
 document.addEventListener("click", function (event) {
   const menu = document.getElementById("i_container");
   const openBtn = document.getElementById("open");
-
+  
+const blur = document.getElementById("blurOverlay");
  const closeBtn = document.getElementById("close");
   const isClickInside = menu.contains(event.target) || openBtn.contains(event.target);
 
   if (!isClickInside) {
     menu.style.width = "0";
     openBtn.style.opacity = "1";
-    closeBtn.style.opacity = "0"
+    closeBtn.style.opacity = "0";
+    blur.style.opacity = "0";
+    blur.style.pointerEvents = "none";
   }
 });
   </script>
