@@ -7,7 +7,7 @@ body{
   width: 100vw;
   height: 150vh;
   /background-image: url("../ig.jpeg");
-  background: linear-gradient(-10deg,#000000,#333333);
+  background: linear-gradient(-10deg,#333333,#111111);
   background-attachment: fixed;
 }
 .noscroll {
@@ -60,7 +60,7 @@ body{
   color: #f8f8ff;
   align-items: center;
   height: 100vh;
-  transition: 0.5s ease;
+  transition: width 0.5s ease, opacity 0.4s ease;
   width:0;
   overflow-x: hidden;
 }
@@ -163,7 +163,7 @@ input[type="search"]::-webkit-search-cancel-button {
   list-style-type: none;
   display: flex;
   justify-content: space-evenly;
-  padding: 0;
+  padding: 0vw;
   margin: 0;
   background-color: rgba(0,0,0,0.6);
   border-top: solid rgba(0,0,0,0.3) 1.5vw;

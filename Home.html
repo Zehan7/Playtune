@@ -69,6 +69,7 @@
   const menu = document.getElementById("i_container");
   const blur = document.getElementById("blurOverlay");
   menu.style.width = "56vw";
+  menu.style.opacity = "1";
   menu.style.borderLeft = "solid rgba(255,255,255,0.2) 0.5vw";
   document.getElementById("open").style.opacity = "0";
   document.getElementById("close").style.opacity = "1";
@@ -81,6 +82,7 @@ function closeNav() {
   const menu = document.getElementById("i_container");
   const blur = document.getElementById("blurOverlay");
   menu.style.width = "0vw";
+  menu.style.opacity = "0";
   menu.style.borderLeft = "none";
   document.getElementById("open").style.opacity = "1";
   document.getElementById("close").style.opacity = "0";
